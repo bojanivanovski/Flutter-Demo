@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/screens/add_remove_component.dart';
+import 'package:flutter_demo/screens/asyncui_example.dart';
+import 'package:flutter_demo/screens/layout_builder_example.dart';
 import 'package:flutter_demo/screens/orientation_widget.dart';
+import 'package:flutter_demo/screens/overflow_example.dart';
 import 'package:flutter_demo/screens/platform_channel_example.dart';
 import 'package:flutter_demo/screens/scaffold_example.dart';
 import 'package:flutter_demo/screens/frame_layout.dart';
@@ -119,6 +122,32 @@ class MyApp extends StatelessWidget {
                   child: const Text('Scaffold example'),
                 ),
 
+                /// OverFlow EXAMPLE
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.only(left: 20.0, right: 30.0),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                        const OverflowExample()));
+                  },
+                  child: const Text('Overflow Example'),
+                ),
+
+                /// LAYOUT BUILDER WIDGET EXAMPLE
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.only(left: 20.0, right: 30.0),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                        const LayoutBuilderExample()));
+                  },
+                  child: const Text('LayoutBuilder Widget Example'),
+                ),
+
                 /// ORIENTATION WIDGET EXAMPLE
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -142,6 +171,18 @@ class MyApp extends StatelessWidget {
                         builder: (context) => const ThemeExample()));
                   },
                   child: const Text('Root and local Theme Example'),
+                ),
+
+                /// AsyncUI EXAMPLE
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.only(left: 20.0, right: 30.0),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const FutureBuilderExample()));
+                  },
+                  child: const Text('AsyncUI Example'),
                 ),
 
                 /// PLATFORM CHANNEL EXAMPLE

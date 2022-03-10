@@ -13,8 +13,7 @@ class _OrientationWidgetExampleState extends State<OrientationWidgetExample> {
 
   @override
   Widget build(BuildContext context) {
-
-
+    
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
